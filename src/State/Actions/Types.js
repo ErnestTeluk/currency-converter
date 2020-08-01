@@ -1,0 +1,2 @@
+export const FETCH_RATES = 'FETCH_RATES';
+export const FETCH_RATES_ERROR = 'FETCH_RATES_ERROR';
