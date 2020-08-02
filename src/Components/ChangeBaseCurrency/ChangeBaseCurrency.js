@@ -15,21 +15,21 @@ const ChangeBaseCurrency = () => {
   return (
     <>
       {(() => {
-        if (Rates.length === 0) {
-          return null;
+        if (Rates.rates !== undefined) {
+          return (
+            <SelectWrapper>
+              <Text>Change Base Currency:</Text>
+              <StyledSelect onChange={handleChange} defaultValue="PLN">
+                {Object.keys(Rates.rates).map((key) => (
+                  <option key={key} value={key}>
+                    {key}
+                  </option>
+                ))}
+              </StyledSelect>
+            </SelectWrapper>
+          );
         }
-        return (
-          <SelectWrapper>
-            <Text>Change Base Currency:</Text>
-            <StyledSelect onChange={handleChange} defaultValue="PLN">
-              {Object.keys(Rates.rates).map((key) => (
-                <option key={key} value={key}>
-                  {key}
-                </option>
-              ))}
-            </StyledSelect>
-          </SelectWrapper>
-        );
+        return null;
       })()}
     </>
   );

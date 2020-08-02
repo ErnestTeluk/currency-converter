@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Text = styled.p`
   width: 100%;
   margin-bottom: 20px;
-  font-family: ${({ theme }) => theme.FontFamily.century};
+  font-family: ${({ theme }) => theme.FontFamily.montserrat};
   font-size: ${({ theme }) => theme.FontSize.xl};
   font-weight: ${({ theme }) => theme.FontWeight.regular};
   color: ${({ theme }) => theme.Colors.grey};
@@ -24,7 +24,7 @@ export const ExchangeWrapper = styled.div`
 `;
 
 export const ExchangeItem = styled.div`
-  width: 100px;
+  width: 110px;
   height: auto;
   display: flex;
   flex-flow: column;
@@ -33,7 +33,7 @@ export const ExchangeItem = styled.div`
 
 export const ExchangeText = styled.p`
   width: 100%;
-  font-family: ${({ theme }) => theme.FontFamily.century};
+  font-family: ${({ theme }) => theme.FontFamily.montserrat};
   font-size: ${({ theme }) => theme.FontSize.l};
   font-weight: ${({ theme }) => theme.FontWeight.regular};
   color: ${({ theme, isTitle }) =>

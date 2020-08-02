@@ -4,7 +4,7 @@ export const LoadingWrapper = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: ${({ theme }) => theme.Colors.white};
-  opacity: 0.2;
+  opacity: 0.5;
   position: absolute;
   top: 0;
   left: 0;
@@ -24,6 +24,6 @@ export const TextBox = styled.p`
   font-family: ${({ theme }) => theme.FontFamily.century};
   font-size: ${({ theme }) => theme.FontSize.xxl};
   font-weight: ${({ theme }) => theme.FontWeight.regular};
-  color: ${({ theme }) => theme.Colors.grey};
+  color: ${({ theme }) => theme.Colors.black};
   text-align: center;
 `;
