@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import ChangeBaseCurrency from 'Components/ChangeCurrency/ChangeBaseCurrency';
+import ChangeBaseCurrency from 'Components/ChangeBaseCurrency/ChangeBaseCurrency';
 import {
   Text,
   ExchangeWrapper,
