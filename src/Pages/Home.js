@@ -1,5 +1,12 @@
 import React from 'react';
 
-const Home = () => <>silence is gold</>;
+import GetCurrencyRates from 'Hoc/GetCurrencyRates';
+import ExchangeTable from 'Components/ExchangeTable/ExchangeTable';
 
-export default Home;
+const Home = () => (
+  <div>
+    <ExchangeTable />
+  </div>
+);
+
+export default GetCurrencyRates(Home);

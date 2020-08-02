@@ -1,7 +1,7 @@
 import { FETCH_RATES, FETCH_RATES_ERROR } from 'State/Actions/Types';
 
 const INITIALSTATE = {
-  currency: {},
+  currency: [],
 };
 
 export default (state = INITIALSTATE, actions) => {

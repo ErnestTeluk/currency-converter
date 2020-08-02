@@ -1,16 +1,26 @@
-import { FETCH_RATES, FETCH_RATES_ERROR } from 'State/Actions/Types';
+import {
+  FETCH_RATES,
+  FETCH_RATES_ERROR,
+  LOADING_TRUE,
+  LOADING_FALSE,
+} from 'State/Actions/Types';
 
 import CurrencyApi from 'Apis/CurrencyApi';
 
 export const FetchRates = (data) => async (dispatch) => {
   try {
-    const response = await CurrencyApi.get('/latest', data);
+    dispatch({ type: LOADING_TRUE });
+    const response = await CurrencyApi.get(
+      `/latest?base=${data.base}&symbols=EUR,USD,GBP,CZK,RON,SEK,HUF,RUB,CNY`
+    );
     dispatch({ type: FETCH_RATES, payload: response.data });
+    dispatch({ type: LOADING_FALSE });
   } catch (e) {
     dispatch({
       type: FETCH_RATES_ERROR,
       payload:
         'sorry, there was a problem with getting the current exchange rate',
     });
+    dispatch({ type: LOADING_FALSE });
   }
 };

@@ -1,2 +1,4 @@
 export const FETCH_RATES = 'FETCH_RATES';
 export const FETCH_RATES_ERROR = 'FETCH_RATES_ERROR';
+export const LOADING_TRUE = 'LOADING_TRUE';
+export const LOADING_FALSE = 'LOADING_FALSE';
