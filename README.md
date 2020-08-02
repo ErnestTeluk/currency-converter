@@ -6,12 +6,14 @@
 
 - react
 - redux
+- axios
 - styled-components
 
 ### run localy
 
 ```
 clone project
-cd into project
-npm start
+get into project folder
+run npm install --save
+run npm start
 ```

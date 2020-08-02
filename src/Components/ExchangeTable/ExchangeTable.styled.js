@@ -24,7 +24,7 @@ export const ExchangeWrapper = styled.div`
 `;
 
 export const ExchangeItem = styled.div`
-  width: 100px;
+  width: 110px;
   height: auto;
   display: flex;
   flex-flow: column;
