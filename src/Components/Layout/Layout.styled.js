@@ -34,7 +34,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         margin: 0;
-        font-family: 'Avalon', sans-serif;
+        font-family: 'Century Gothic', sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.15;

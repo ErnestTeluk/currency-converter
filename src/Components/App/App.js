@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Layout from 'Components/Layout/Layout';
-import Home from 'Pages/Home';
+import Home from 'Pages/Home/Home';
 
 const App = () => {
   return (
