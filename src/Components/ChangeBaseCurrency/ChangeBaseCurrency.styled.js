@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SelectWrapper = styled.div`
-  width: 323px;
+  width: 324px;
   height: auto;
   display: flex;
   margin: 20px auto;
@@ -14,7 +14,7 @@ export const SelectWrapper = styled.div`
 `;
 
 export const Text = styled.span`
-  font-family: ${({ theme }) => theme.FontFamily.century};
+  font-family: ${({ theme }) => theme.FontFamily.montserrat};
   font-size: ${({ theme }) => theme.FontSize.l};
   font-weight: ${({ theme }) => theme.FontWeight.regular};
   color: ${({ theme }) => theme.Colors.white};
@@ -28,4 +28,7 @@ export const StyledSelect = styled.select`
   padding: 10 0px;
   border-radius: 10px;
   border: 1px solid ${({ theme }) => theme.Colors.green};
+  font-family: ${({ theme }) => theme.FontFamily.montserrat};
+  font-size: ${({ theme }) => theme.FontSize.xs};
+  font-weight: ${({ theme }) => theme.FontWeight.regular};
 `;
