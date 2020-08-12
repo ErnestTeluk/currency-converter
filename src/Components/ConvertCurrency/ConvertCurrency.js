@@ -52,52 +52,47 @@ const ConvertCurrency = () => {
 
   return (
     <>
-      {(() => {
-        if (Rates.rates !== undefined) {
-          return (
-            <SectionWrapper>
-              <Text>
-                Enter the data and check how much you will receive in another
-                currency
-              </Text>
-              <ConverterWrapper>
-                <ConverterBox>
-                  <ConvertItem>
-                    <ConvertSelect defaultValue="PLN" onChange={BaseValue}>
-                      {Object.keys(Rates.rates).map((key) => (
-                        <option key={key} value={key}>
-                          {key}
-                        </option>
-                      ))}
-                    </ConvertSelect>
-                    <ConvertInput
-                      id="currency"
-                      name="currency"
-                      onChange={(e) => setInputValue(e.target.value)}
-                    />
-                  </ConvertItem>
-                  <ConvertItem>
-                    <ConvertSelect defaultValue="EUR" onChange={SymbolsValue}>
-                      {Object.keys(Rates.rates).map((key) => (
-                        <option key={key} value={key}>
-                          {key}
-                        </option>
-                      ))}
-                    </ConvertSelect>
-                    <ConvertOutput>{convertedNumber}</ConvertOutput>
-                  </ConvertItem>
-                  <ButtonWrapper>
-                    <StyledButton onClick={ClickHandler}>
-                      Change Currency
-                    </StyledButton>
-                  </ButtonWrapper>
-                </ConverterBox>
-              </ConverterWrapper>
-            </SectionWrapper>
-          );
-        }
-        return null;
-      })()}
+      {Rates.rates !== undefined ? (
+        <SectionWrapper>
+          <Text>
+            Enter the data and check how much you will receive in another
+            currency
+          </Text>
+          <ConverterWrapper>
+            <ConverterBox>
+              <ConvertItem>
+                <ConvertSelect defaultValue="PLN" onChange={BaseValue}>
+                  {Object.keys(Rates.rates).map((key) => (
+                    <option key={key} value={key}>
+                      {key}
+                    </option>
+                  ))}
+                </ConvertSelect>
+                <ConvertInput
+                  id="currency"
+                  name="currency"
+                  onChange={(e) => setInputValue(e.target.value)}
+                />
+              </ConvertItem>
+              <ConvertItem>
+                <ConvertSelect defaultValue="EUR" onChange={SymbolsValue}>
+                  {Object.keys(Rates.rates).map((key) => (
+                    <option key={key} value={key}>
+                      {key}
+                    </option>
+                  ))}
+                </ConvertSelect>
+                <ConvertOutput>{convertedNumber}</ConvertOutput>
+              </ConvertItem>
+              <ButtonWrapper>
+                <StyledButton onClick={ClickHandler}>
+                  Change Currency
+                </StyledButton>
+              </ButtonWrapper>
+            </ConverterBox>
+          </ConverterWrapper>
+        </SectionWrapper>
+      ) : null}
     </>
   );
 };
